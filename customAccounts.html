@@ -1,0 +1,72 @@
+<template name="customOptionsToggle">
+  <button id="customOptionsToggle" class="usernameCap" onclick="toggleOptions()">
+    {{#if currentUser}}
+      {{currentUser.username}}
+    {{else}}
+      ACCOUNT
+    {{/if}}
+  </button>
+  {{#if session "optionsToggleIsOpen"}}
+    {{>customOptions}}
+  {{else}}
+  {{/if}}
+
+</template>
+
+<template name="customOptions">
+  <div id="customOptions">
+    <span></span>
+    {{>customLogin}}
+    <span></span>
+  </div>
+</template>
+
+<template name="customLogin">
+  <div id="customLogin">
+      {{#if currentUser}}
+        {{>loggedInOptions}}
+      {{else}}
+        {{>loggedOutOptions}}
+      {{/if}}
+      <div id='options-error'></div>
+  </div>
+</template>
+
+<template name="loggedInOptions">
+  <div id="optionsLI" class="options">
+    {{#if checkChangePasswordIsOpen}}
+      <input id="input-password-change-current" type="password" placeholder="Current Password" class="optionsInput">
+      <input id="input-password-change-new" type="password" placeholder="New Password" class="optionsInput">
+      <input id="input-password-change-new-again" type="password" placeholder="New Password (confirm)" class="optionsInput">
+      <button class="optionsButton" id="change-password" onclick="changePassword()">SUBMIT</button>
+      <button class="optionsButton" id="closeChangePassword" onclick="closeChangePassword()">Cancel</button>
+    {{else}}
+      <button class="optionsButton" id="openChangePassword" onclick="openChangePassword()">CHANGE PASSWORD</button>
+      <button class="optionsButton" id="logOut" onclick="logOut()">SIGN OUT</button>
+    {{/if}}
+  </div>
+</template>
+
+
+<template name="loggedOutOptions">
+  <div id="optionsLO" class="options">
+  <input id="input-username" type="text" placeholder="Username" class="optionsInput">
+  <input id="input-password" type="password" placeholder="Password" class="optionsInput">
+    {{#if checkCreateIsOpen}}
+      {{>createAccount}}
+    {{else}}
+      {{>signIn}}
+    {{/if}}
+  </div>
+</template>
+
+<template name="signIn">
+  <button class="optionsButton" id="logIn" type="button" onclick="logIn()">SIGN IN</button>
+  <button class="optionsButton" id="openCreate" type="button" onclick="openCreateUser()">CREATE</button>
+</template>
+
+<template name="createAccount">
+   <input id="input-password-again" type="password" placeholder="Password (confirm)" class="optionsInput">
+  <button class="optionsButton" id="createUser" type="button" onclick="createUser()">SUBMIT</button>
+  <button class="optionsButton" id="closeCreate" onclick="closeCreateUser()">CANCEL</button>
+</template>

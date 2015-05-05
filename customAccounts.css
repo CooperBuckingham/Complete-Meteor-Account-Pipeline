@@ -1,0 +1,168 @@
+/*Meteor Theme*/
+
+
+#customOptionsToggle{
+  background-color: white;
+  color: #27272b;
+  border: 2px solid #27272b;
+  font-size: .9em;
+  font-weight: bold;
+  padding: .5em 1em .4em 1em;
+  margin: 2px;
+  text-decoration: none;
+  transition: all .2s;
+  webkit-transition: all .2s;
+  outline: 0;
+}
+#customOptionsToggle:hover{
+  color: #de4f4f;
+  border: 2px solid #de4f4f;
+}
+#customOptionsToggle:active{
+
+}
+
+.usernameCap{
+  text-transform: uppercase;
+}
+
+
+#customOptions{
+  text-decoration: none;
+  font-size: .9em;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  z-index: 100;
+  border: 2px solid #27272b;
+  width: 200px;
+  height: auto;
+  margin: 2px;
+}
+
+#customOptions span{
+  width: 100%;
+  border-bottom: 1px solid #27272b;
+  margin: 2px;
+}
+
+/*=============================*/
+/*Default Holder for All Custom Account Inputs and Buttons
+You can use this window anywhere, or take the peices out of it
+Or use it in the provided options flyout, etc */
+#customLogin{
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/*Message Field at the base of the customLogin window, displays status*/
+#options-error{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #de4f4f;
+  width: 94%;
+  margin: 2px;
+  padding: 0em 1em 0em 1em;
+  transition: all 1s;
+  webkit-transition: all 1s;
+  font-size: .9em;
+  line-height: 1.3em;
+}
+
+/*shared settings*/
+.optionsButton{
+  width: 94%;
+  background-color: white;
+  color: black;
+  border: 2px solid #27272b;
+  font-size: .9em;
+  font-weight: bold;
+  padding: .4em 1em .4em 1em;
+  margin: 2px;
+  transition: all .2s;
+  webkit-transition: all .2s;
+  text-transform: uppercase;
+}
+.optionsButton:hover{
+  color: #de4f4f;
+  border: 2px solid #de4f4f;
+}
+
+.optionsInput{
+  width: 94%;
+  background-color: white;
+  color: black;
+  border: 2px solid #27272b;
+  font-size: .9em;
+  font-weight: bold;
+  padding: .4em 1em .4em 1em;
+  margin: 2px;
+  transition: all .2s;
+  webkit-transition: all .2s;
+
+}
+.optionsInput:hover{
+  color: #de4f4f;
+  border: 2px solid #de4f4f;
+}
+
+/*=============================*/
+/*Signin Section*/
+#input-username{
+}
+
+#input-password{
+}
+
+#logIn{
+
+}
+
+/*=============================*/
+/*Signout Section*/
+#logOut{
+
+}
+
+
+/*Password Change Area*/
+#input-password-change-current{
+
+}
+
+#input-password-change-new{
+
+}
+
+#input-password-change-new-again{
+
+}
+
+#closeChangePassword{
+
+}
+
+#openChangePassword{
+
+}
+
+
+/*=============================*/
+/*Create new user buttons*/
+#openCreate{
+
+}
+
+#closeCreate{
+
+}
+
+#createUser{
+
+}
